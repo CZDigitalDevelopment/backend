@@ -1,7 +1,7 @@
 from unittest.mock import MagicMock, patch
 from pytest import fixture, raises
 
-from balancelib.interactors.post_create_user_interactor import (
+from chalicelib.interactors.post_create_user_interactor import (
     PostCreateUserResponseModel,
     PostCreateUserRequestModel,
     PostCreateUserInteractor)
@@ -56,7 +56,7 @@ def test_post_create_user_interactor(interactor_factory):
     assert interactor.adapter == mock_adapter
 
 
-patch_root = 'balancelib.interactors.post_create_user_interactor'
+patch_root = 'chalicelib.interactors.post_create_user_interactor'
 
 
 @patch(f'{patch_root}.User')

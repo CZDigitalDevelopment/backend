@@ -2,7 +2,7 @@ from unittest.mock import MagicMock, patch
 
 from pytest import fixture
 
-from balancelib.interactors.get_read_user_interactor import \
+from chalicelib.interactors.get_read_user_interactor import \
     (GetReadUserResponseModel,
      GetReadUserRequestModel,
      GetReadUserInteractor)
@@ -53,7 +53,7 @@ def test_get_read_user_interactor(interactor_factory):
     assert interactor.adapter == mock_adapter
 
 
-patch_root = 'balancelib.interactors.get_read_user_interactor'
+patch_root = 'chalicelib.interactors.get_read_user_interactor'
 
 
 def test_get_read_user_interactor_get_user(interactor_factory):

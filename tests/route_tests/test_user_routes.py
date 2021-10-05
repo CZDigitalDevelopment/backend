@@ -1,10 +1,10 @@
 from unittest.mock import patch
 
-from balancelib.routes.user_routes import (post_create_user,
+from chalicelib.routes.user_routes import (post_create_user,
                                            get_read_user,
                                            post_token_authenticate)
 
-patch_root = 'balancelib.routes.user_routes'
+patch_root = 'chalicelib.routes.user_routes'
 
 
 @patch(f'{patch_root}.AuthRegister')

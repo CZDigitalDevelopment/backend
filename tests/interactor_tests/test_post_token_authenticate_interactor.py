@@ -2,7 +2,7 @@ from unittest.mock import MagicMock, patch
 
 from pytest import fixture
 
-from balancelib.interactors.post_token_authenticate_interactor import (
+from chalicelib.interactors.post_token_authenticate_interactor import (
     PostTokenAuthenticateResponseModel,
     PostTokenAuthenticateRequestModel,
     PostTokenAuthenticateInteractor,)
@@ -51,7 +51,7 @@ def test_post_token_authenticate_interactor():
     assert interactor.adapter == mock_adapter
 
 
-patch_root = 'balancelib.interactors.post_token_authenticate_interactor'
+patch_root = 'chalicelib.interactors.post_token_authenticate_interactor'
 
 
 @patch(f'{patch_root}.User')

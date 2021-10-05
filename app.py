@@ -1,15 +1,7 @@
-from fastapi import FastAPI
-from balancelib.routes import user_routes
-from fastapi.middleware.cors import CORSMiddleware
+from chalice import Chalice
 
-app = FastAPI(app_name="balance")
+from chalicelib.routes.user_routes import users
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+app = Chalice(app_name="balance")
 
-app.include_router(user_routes.router)
+app.register_blueprint(users)
